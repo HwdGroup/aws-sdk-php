@@ -1108,6 +1108,41 @@ return array (
                         ),
                     ),
                 ),
+                'Applications' => array(
+                    'type' => 'array',
+                    'location' => 'json',
+                    'properties' => array(
+                        'Name' => array(
+                            'type' => 'string',
+                            'location' => 'json',
+                            'maxLength' => 256,
+                        )
+                    )
+                ),
+                'ReleaseLabel' => array(
+                    'type' => 'string',
+                    'location' => 'json',
+                    'maxLength' => 10280,
+                ),
+                'Configurations' => array(
+                    'type' => 'array',
+                    'location' => 'json',
+                    'properties' => array(
+                        'Classification' => array(
+                            'type' => 'string',
+                            'location' => 'json',
+                            'maxLength' => 256,
+                        ),
+                        'Properties' => array(
+                            'type' => 'array',
+                            'items' => array(
+                                'name' => 'XmlStringMaxLen256',
+                                'type' => 'string',
+                                'maxLength' => 256,
+                            ),
+                        ),
+                    ),
+                ),
             ),
             'errorResponses' => array(
                 array(
